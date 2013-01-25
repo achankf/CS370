@@ -1,0 +1,83 @@
+\begin{enumerate}[(a)]
+\item 
+First caculate the parts:
+\begin{gather*}
+b^2 = 12345.4321 \approx 12345\\
+4ac = 4 \times 1 \times 1.2121 = 4.8484\\
+b^2 - 4ac = 12340.1516 \approx 12340\\
+\sqrt{b^2 - 4ac} = 111.085552615990527825 \dots \approx 111.09\\
+-b + \sqrt{b^2 - 4ac} = -0.02\\
+-b - \sqrt{b^2 - 4ac} = -222.2\\
+\end{gather*}
+Hence, $(fl(r_1), fl(r_2)) 
+	\approx (-0.01,-111.1)$. 
+By calculator, $(r_1,r_2) 
+	\approx (-0.010910, -111.10)$.\\
+Hence, the errors are 
+$(\delta_{r_1}, \delta_{r_2}) 
+	\approx (-0.083410, 0)$.
+\hfill $\blacksquare$
+
+\item
+Rationalize the numerator:
+\begin{gather*}
+r_1 = \frac{\sqrt{b^2 - 4ac}) - b}{2a}\\
+= \frac{(\sqrt{b^2 - 4ac}) - b) \times (\sqrt{b^2 - 4ac} + b)}
+	{2a \times (\sqrt{b^2 - 4ac} + b)}\\
+= \frac{b^2 - 4ac - b^2} {2a \times (\sqrt{b^2 - 4ac} + b)}\\
+= \frac{-2c}{\sqrt{b^2 - 4ac} + b}\\
+= \frac{2c}{- b -\sqrt{b^2 - 4ac}}
+\end{gather*}
+As required.
+\hfill $\blacksquare$
+
+\item
+Derive $r_2$ in term of $r_1$:
+\begin{gather*}
+r_2 = \frac{-b -\sqrt{b^2 - 4ac}}{2a}\\
+= \frac{-(b +\sqrt{b^2 - 4ac})}{2a}\\
+\implies = \frac{-(b^2 - b^2 - 4ac)} {2a \times (b-\sqrt{b^2 - 4ac})}\\
+= \frac{2c}{b - \sqrt{b^2 - 4ac}}\\
+\implies = \frac{-2c}{- b +\sqrt{b^2 - 4ac}}\\
+\implies = \frac{-2c}{\frac{- b +\sqrt{b^2 - 4ac}}{2a} \times 2a}\\
+\implies = \frac{-c}{ar_1}\\
+\end{gather*}
+{\bf Algorithm R.}\\
+if $b>0$ then
+\begin{gather*}
+r_2 = \frac{-b -\sqrt{b^2 - 4ac}}{2a}\\
+r_1 = \frac{c}{ar_2}
+\end{gather*}
+else
+\begin{gather*}
+r_1 = \frac{\sqrt{b^2 - 4ac}) - b}{2a}\\
+r_2 = \frac{-c}{ar_1}
+\end{gather*}
+end
+\hfill $\blacksquare$
+
+\item
+\begin{gather*}
+r_2 = -111.1 \text{ (from before)}\\
+r_1 = \frac{1.2121}{1\times -111.1} = -0.010910
+\end{gather*}
+Hence, the errors $(\delta_{r_1}, \delta_{r_2}) \approx (0,0)$. 
+Unlike (a), the errors for (d) are close to 0.
+Hence, Algorithm R is a better algorithm than the one used in (a).
+\hfill $\blacksquare$
+
+\item
+\begin{gather*}
+b^2 = 111.1^2 = 12343.21 \approx 12340\\
+4ac = 4 \times 1 \times 1.212 \approx 4.848\\
+b^2 - 4ac = 12335.152 \approx 12340\\
+\sqrt{b^2 - 4ac} = 111.0855526 \dots \approx 111.1\\
+-b - \sqrt{b^2 - 4ac} = -222.2\\
+r_2 = -111.1\\
+r_1 = \frac{1.212}{1\times -111.1} = -0.01090909\dots \approx 0.01090
+\end{gather*}
+Hence, the errors $(\delta_{r_1}, \delta_{r_2}) \approx (0,0)$. 
+Unlike (a), the errors for (d) are close to 0. 
+Hence, Algorithm R is a better algorithm than the one used in (a).
+\hfill $\blacksquare$
+\end{enumerate}

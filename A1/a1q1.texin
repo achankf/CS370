@@ -1,0 +1,54 @@
+\begin{enumerate}[(a)]
+\item 
+It is $0.1 \times 2^{-1022}$.
+\hfill $\blacksquare$
+
+\item
+$F$ has
+\begin{gather*}
+|F| = \underbrace{1}_{\text{for 0}} 
+	+ \underbrace{1}_{\text{leading one}} 
+	\times \underbrace{2^{52}}_{\text{52 remaining digits}} 
+	\times \underbrace{(1022+1023)}_{\text{exponments of 2}}\\
+= 1 + 2025(2^{52})
+\end{gather*}
+\hfill $\blacksquare$
+
+\item 
+Rewrite the inequality:
+\begin{gather*}
+1 \le x < 2
+\iff
+0.1 \times 2^1 \le x < 0.1 \times 2^2\\
+\text{Fraction} = \frac{
+	\underbrace{1}_{\text{leading one}} 
+	\times \underbrace{2^{52}}_{\text{52 remaining digits}} 
+	\times \underbrace{1}_{\text{one exponment}}
+	}{
+	|F|
+	}
+\approx 0.0004938
+\end{gather*}
+The distance for consecutive numbers is 
+$1 \times 2^{-53} \times 2 = 2^{-52}$
+\hfill $\blacksquare$
+
+\item
+Rewrite the inequality:
+\begin{gather*}
+\frac{1}{64} \le x < \frac{1}{32}
+\iff
+\frac{1}{2^6} \le x < \frac{1}{2^5}
+\iff
+0.1 \times 2^{-5} \le x < 0.1 \times 2^{-4}\\
+\text{Fraction} = \frac{
+	1 \times 2^{52} \times 1
+	}{
+	|F|
+	}
+\approx 0.0004938
+\end{gather*}
+The distance for consecutive numbers is 
+$1 \times 2^{-53} \times 2^{-5} = 2^{-58}$
+\hfill $\blacksquare$
+\end{enumerate}
