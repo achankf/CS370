@@ -1,15 +1,13 @@
 I have starred at the screen for two hours on Friday for an easy question...
 
-Substitute $a,b$ into $p_n$ (even though it does not matter):
+Take the limit of $p_n$:
 \begin{gather*}
-p_n = \frac{1}{48}(7p_1 - p_0)(7^n) + \frac{7}{48}(7p_0 - p_1)(7^{-n})\\
-\intertext{By factoring out $7^{-n}$}
-= \frac{1}{48(7^n)}((7p_1 - p_0)(7^{2n}) + 7(7p_0 - p_1)\\
-\implies \lim_{n \to \infty} p_n = 
-	\frac{(7p_1 - p_0)}{48} \lim_{n \to \infty} \frac{7^{2n}}{7^n}
-		+ \frac{7(7p_0 - p_1)}{48} \lim_{n \to \infty} \frac{1}{7^n}\\
-p_n = \frac{a7^{2n} - b}{7^n}
+\lim_{n \to \infty} p_n = 
+	a\lim_{n \to \infty} 7^{n}
+		+ b\lim_{n \to \infty} \frac{1}{7^n}\\
+= a\lim_{n \to \infty} 7^{n} + 0
 \end{gather*}
-Hence the limit is $+\infty$ no matter what values of $(p_0,p_1)$ are.
-Therefore, the given values are unstable.
+But $a = \frac{1}{48}(7(\frac{1}{7}) - 1) = 0$.
+Hence the limit goes to zero.
+Therefore, the given computation is stable.
 \hfill $\blacksquare$
