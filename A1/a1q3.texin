@@ -5,7 +5,7 @@ Take the limit of $p_n$:
 		+ b\lim_{n \to \infty} \frac{1}{7^n}\\
 = a\lim_{n \to \infty} 7^{n} + 0
 \end{gather*}
-But $a = \frac{1}{48}(7(\frac{1}{7}) - 1) = 0$.
+But $a$, which is a constant based on $p_0$ and $p_1$, $a = \frac{1}{48}(7(\frac{1}{7}) - 1) = 0$.
 Hence the limit goes to zero.
 Therefore, the given computation is stable.
 \hfill $\blacksquare$
