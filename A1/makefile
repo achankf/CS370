@@ -8,8 +8,8 @@ all: $(OUT)
 	pdflatex $<
 	pdflatex $<
 
-a1q4b.eps: a1q4.m
-	octave a1q4.m
+a1q4b.eps: m/a1q4.m
+	octave m/a1q4.m
 
 .phony: clean
 clean:
