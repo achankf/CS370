@@ -4,11 +4,11 @@ OUT= $(IN:.tex=.pdf)
 
 all: $(OUT)
 
-%.pdf:%.tex $(INCLUDE) a1q4b.png
+%.pdf:%.tex $(INCLUDE) a1q4b.eps
 	pdflatex $<
 	pdflatex $<
 
-a1q4b.png: a1q4.m
+a1q4b.eps: a1q4.m
 	octave a1q4.m
 
 .phony: clean

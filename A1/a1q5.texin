@@ -1,0 +1,10 @@
+First, the end conditions of of not-a-knot cubic spline implies
+$ S''' (x_1) = S'''(x_2) $ and $ S''' (x_2) = S''' (x_3) $. Hence,
+\begin{gather*}
+S'''(x_1) = S'''(x_2) = S'''(x_3)
+\end{gather*}
+But $P'''(x) = 6$, a constant, which fits the end conditions of $S$.
+Secondly, the first and second derivatives of $P(x)$ are continuous, because $P$ is a polynomial (fact). 
+Lastly, $P$ maps all $(x_i,y_i), i \in \{1,2,3,4\}$.
+Therefore, $P$ is a not-a-knot spline interpolant for $S$.
+\hfill $\blacksquare$
