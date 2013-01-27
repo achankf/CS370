@@ -14,4 +14,4 @@ y3=ones(1,length(x3));
 
 plot(x0,y0,99.5,99.9,x1,y1,99.9,100,x2,y2,100,100.1,x3,y3,100.1,100.5);
 axis([ 99.5 100.5 -0.5 1.5]);
-print -dsvg a1q4b.svg
+print -deps a1q4b.eps
