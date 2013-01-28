@@ -1,8 +1,10 @@
 \lstset{
-	language=bash,
+	language=matlab,
 	numbers=left,
 	showspaces=false,
 	showstringspaces=false,
+	morekeywords={findt,interpolate,refinet,title,axis,endfunction,imread},
+	deletekeywords={type},
 	stepnumber=1,
 	basicstyle=\ttfamily,
 	frame=single,
@@ -10,24 +12,7 @@
 	tabsize=2
 }
 
-The codes:\\
-init.m
-\lstinputlisting{m/init.m}
-findt.m
-\lstinputlisting{m/findt.m}
-refinet.m
-\lstinputlisting{m/refinet.m}
-interpolate.m
-\lstinputlisting{m/interpolate.m}
-a1q6\_data.m
-\lstinputlisting{m/a1q6_data.m}
-a1q6a.m
-\lstinputlisting{m/a1q6a.m}
-a1q6b.m
-\lstinputlisting{m/a1q6b.m}
-a1q6c.m
-\lstinputlisting{m/a1q6c.m}
-
+The graphs:
 \begin{enumerate}
 \item The Data Points\\
 \includegraphics[scale=0.6]{a1q6a.eps}
@@ -36,3 +21,33 @@ a1q6c.m
 \item Data Points With Interpolation\\
 \includegraphics[scale=0.6]{a1q6c.eps}
 \end{enumerate}
+
+The codes (assuming that the splines package is already being loaded):\\
+\begin{itemize}
+\item
+init.m (only used in extraction of data points)
+\lstinputlisting{m/init.m}
+\item
+findt.m (helper function for the generation of the t parameters)
+\lstinputlisting{m/findt.m}
+\item
+refinet.m (helper function for refining t)
+\lstinputlisting{m/refinet.m}
+\item
+interpolate.m (helper function that returns the interpolated vectors)
+\lstinputlisting{m/interpolate.m}
+\item
+a1q6\_data.m (the data)
+\lstinputlisting{m/a1q6_data.m}
+\item
+a1q6a.m (plot of the data points)
+\lstinputlisting{m/a1q6a.m}
+\item
+a1q6b.m (plot of the data points that are connected by lines)
+\lstinputlisting{m/a1q6b.m}
+\item
+a1q6c.m (plot of the interpolated data)
+\lstinputlisting{m/a1q6c.m}
+\end{itemize}
+
+\hfill $\blacksquare$
