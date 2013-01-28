@@ -1,4 +1,4 @@
-data = imread('initial.png');
+data = imread('hand_final.png');
 clf;
 h = imagesc(data);
 axis image;
