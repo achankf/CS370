@@ -1,11 +1,9 @@
 clear
-
 type = 'not-a-knot';
 type2 = 'complete';
 fac = 3;
 
-% load data
-a1q6_data;
+a1q6_data; % load data
 
 % interpolate initials
 [tx0 ty0] = interpolate(x0,y0,type,fac);

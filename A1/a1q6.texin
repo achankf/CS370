@@ -1,0 +1,38 @@
+\lstset{
+	language=bash,
+	numbers=left,
+	showspaces=false,
+	showstringspaces=false,
+	stepnumber=1,
+	basicstyle=\ttfamily,
+	frame=single,
+	breaklines=true,
+	tabsize=2
+}
+
+The codes:\\
+init.m
+\lstinputlisting{m/init.m}
+findt.m
+\lstinputlisting{m/findt.m}
+refinet.m
+\lstinputlisting{m/refinet.m}
+interpolate.m
+\lstinputlisting{m/interpolate.m}
+a1q6\_data.m
+\lstinputlisting{m/a1q6_data.m}
+a1q6a.m
+\lstinputlisting{m/a1q6a.m}
+a1q6b.m
+\lstinputlisting{m/a1q6b.m}
+a1q6c.m
+\lstinputlisting{m/a1q6c.m}
+
+\begin{enumerate}
+\item The Data Points\\
+\includegraphics[scale=0.6]{a1q6a.eps}
+\item Data Points Connected With Straight Lines\\
+\includegraphics[scale=0.6]{a1q6b.eps}
+\item Data Points With Interpolation\\
+\includegraphics[scale=0.6]{a1q6c.eps}
+\end{enumerate}
