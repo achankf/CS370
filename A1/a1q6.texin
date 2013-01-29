@@ -49,5 +49,3 @@ a1q6b.m (plot of the data points that are connected by lines)
 a1q6c.m (plot of the interpolated data)
 \lstinputlisting{m/a1q6c.m}
 \end{itemize}
-
-\hfill $\blacksquare$

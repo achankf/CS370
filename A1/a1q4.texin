@@ -6,7 +6,7 @@ q(99.9) = 50(99.9-99.9)^2 = \hat{f}(99.9) = 0\\
 q(100) = 50(100-99.9)^2 = 1-50(100 - 100.1)^2 = \hat{f}(100) = 0.5\\
 q(100.1) = 1-50(100.1-100.1)^2 = \hat{f}(100.1) = 1
 \end{gather*}
-Hence $q = \hat{f}$ at $S1, S2, S3$ and $q$ is continuous.
+Hence $q$ is continuous at $S1, S2, S3$ and contains the break-points.
 Now check the continuity of $q'$:
 \begin{gather*}
 q'(S) =
@@ -23,7 +23,7 @@ q'(100.1) = -100(100.1-100.1) = 0
 Hence, $q'$ is continuous at the break points.
 Also, since $\hat{f}'(S) = 0$ for all $S$,
 	$q'(S_1) = 0 = \hat{f}'(S_1)$ and
-	$q'(S_3) = 0 = \hat{f}'(S_3)$. Therefore, $q$ is a quadratic interpolating spline for $S_1, S_2, S_3$.
+	$q'(S_3) = 0 = \hat{f}'(S_3)$. Hence, the end conditions are satisfied. Therefore, $q$ is a quadratic interpolating spline for $\hat{f}$ at $S_1, S_2, S_3$.
 \hfill $\blacksquare$
 
 \item
