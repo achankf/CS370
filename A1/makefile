@@ -17,6 +17,6 @@ a1q6a.eps a1q6b.eps a1q6c.eps: m/a1q6_print.m4
 
 .phony: clean
 clean:
-	rm -f *.{log,aux,eps} a1q4b-eps-converted-to.pdf
+	rm -f *.{log,aux,eps} *eps-converted-to.pdf
 cleanall:clean
 	rm -f $(OUT)
