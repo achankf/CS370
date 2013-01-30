@@ -11,11 +11,11 @@ b^2 - 4ac = 12340.1516 \approx 12340\\
 \end{gather*}
 Hence, $(fl(r_1), fl(r_2)) 
 	\approx (-0.01,-111.1)$. 
-By calculator, $(r_1,r_2) 
-	\approx (-0.010910, -111.10)$.\\
+By calculator,\\
+$(r_1,r_2) \approx (-0.0109100803694867128, -111.099089919630513287)$.\\
 Hence, the errors are 
 $(\delta_{r_1}, \delta_{r_2}) 
-	\approx (-0.083410, 0)$.
+	\approx (~0.083416, -8.1916 \times 10^{-6})$.
 \hfill $\blacksquare$
 
 \item
@@ -61,7 +61,7 @@ end
 r_2 = -111.1 \text{ (from before)}\\
 r_1 = \frac{1.2121}{1\times -111.1} = -0.010910
 \end{gather*}
-Hence, the errors $(\delta_{r_1}, \delta_{r_2}) \approx (0,0)$. 
+Hence, the errors $(\delta_{r_1}, \delta_{r_2}) \approx (7.3665 \times 10^{-6},-8.1916 \times 10^{-6})$. 
 Unlike (a), the errors for (d) are close to 0.
 Hence, Algorithm R is a better algorithm than the one used in (a).
 \hfill $\blacksquare$
@@ -74,9 +74,9 @@ b^2 - 4ac = 12335.152 \approx 12340\\
 \sqrt{b^2 - 4ac} = 111.0855526 \dots \approx 111.1\\
 -b - \sqrt{b^2 - 4ac} = -222.2\\
 r_2 = -111.1\\
-r_1 = \frac{1.212}{1\times -111.1} = -0.01090909\dots \approx 0.01090
+r_1 = \frac{1.212}{1\times -111.1} = -0.01090909\dots \approx -0.01090
 \end{gather*}
-Hence, the errors $(\delta_{r_1}, \delta_{r_2}) \approx (0,0)$. 
+Hence, the errors $(\delta_{r_1}, \delta_{r_2}) \approx (9.2395 \times 10^{-4},-8.1916 \times 10^{-6})$. 
 Unlike (a), the errors for (d) are close to 0. 
 Hence, Algorithm R is a better algorithm than the one used in (a).
 \hfill $\blacksquare$

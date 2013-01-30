@@ -1,6 +1,6 @@
 \begin{enumerate}[(a)]
 \item 
-It is $0.1 \times 2^{-1022}$.
+The smallest positive number is $0.1 \times 2^{-1022}$; the largest is $0.\underbrace{1 \dots 1}_{53 one's} \times 2^{1023}$
 \hfill $\blacksquare$
 
 \item
