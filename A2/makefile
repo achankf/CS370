@@ -11,6 +11,6 @@ $(OUT):$(IN) $(INCLUDE)
 
 .phony: clean
 clean:
-	rm -f *.{log,aux,eps} *eps-converted-to.pdf
+	rm -f *.log *.aux *.eps *eps-converted-to.pdf
 cleanall:clean
 	rm -f $(OUT)

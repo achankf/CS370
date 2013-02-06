@@ -1,0 +1,22 @@
+\begin{enumerate}[(a)]
+\item
+Let $z_1=y, z_2 = \frac{dy}{dt}$, then the ODE becomes the following:
+\begin{gather*}
+	\frac{dz}{dt} = f(z,t)=
+	\begin{cases}
+		\frac{dz_1}{dt} = z_2\\
+		\frac{dz_2}{dt} = y = z_1
+	\end{cases}\\
+	(z_1(0), z_2(0)) = (1,2)
+\end{gather*}
+With initial conditions $(z_1(0), z_2(0)) = (1,2)$.
+
+\item
+The answers are the following:
+\begin{gather*}
+z(1) = z(0) + f(z(0),0)h\\
+	= \begin{bmatrix}1\\2\end{bmatrix} + f(\begin{bmatrix}1\\2\end{bmatrix},0)(0.5)\\
+	= 1 + 
+\end{gather*}
+\item
+\end{enumerate}
