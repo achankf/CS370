@@ -18,14 +18,27 @@ Hence,
 With initial conditions $(z_1(0), z_2(0)) = (1,2)$.
 
 \item
-With Forward Euler Method,
+Since $z_1 = y$, the targets are $z_1(0.5)$ and $z_1(1)$. With Forward Euler Method,
 \begin{gather*}
-y(0.5) = z_1(0) + f(z_1,t) \times h\\
-	= z_1(0) + z_2(0) \times h\\
-	= 1 + 2 \times 0.5\\
-	= 2\\
-	= \begin{bmatrix}1\\2\end{bmatrix} + f(\begin{bmatrix}1\\2\end{bmatrix},0)(0.5)\\
-	= 1 + 
+z_1(0.5) = z_1(0) + z_2(0) \times h\\
+	= 1 + 2 \times 0.5 = 2\\
+z_2(0.5) = z_2(0) + z_1(0) \times h\\
+	= 2 + 1 \times 0.5 = 2.5\\
+z_1(1) = z_1(0.5) + z_2(0.5) \times 0.5\\
+	= 2 + 2.5 \times 0.5 = 3.25\\
+z_2(1) = z_2(0.5) + z_1(0.5) \times 0.5\\
+	= 2.5 + 2 \times 0.5 = 3.5\\
 \end{gather*}
 \item
+Since $0.5$ is the first iteration,
+$z_1^*(0.5) = z_1(0.5)$ and $z_2^*(0.5) = z_2(0.5)$ from the above.
+With the modified Euler method:
+\begin{gather*}
+z_1(0.5) = z_1(0) + \frac{h}{2} ( z_2(0) + z_2^*(0.5))\\
+	= 1 + 0.25 (2+2.5)
+	= 2.125\\
+z_2(0.5) = z_2(0) + \frac{h}{2} ( z_1(0) + z_1^*(0.5))\\
+	= 2 + 0.25 (1 + 2)
+	= 2.75
+\end{gather*}
 \end{enumerate}
