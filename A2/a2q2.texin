@@ -1,0 +1,47 @@
+\begin{enumerate}[(a)]
+\item 
+First find the derivatives:
+\begin{align*}
+z(t) &= \frac{1}{2}(e^t + e^{-t} - t^2) - 1\\
+z'(t) &= \frac{1}{2}(e^t - e^{-t} - 2t) = \frac{1}{2}(e^t - e^{-t}) - t\\
+z''(t) &= \frac{1}{2}(e^t + e^{-t}) - 1\\
+z'''(t) &= \frac{1}{2}(e^t - e^{-t})
+\end{align*}
+Then check the initial value problems:
+\begin{align*}
+\frac{d^3z}{dt^3} - \frac{dz}{dt} &= z'''(t) - z'(t)\\
+	&= \frac{1}{2}(e^t - e^{-t}) - \frac{1}{2}(e^t - e^{-t}) + t\\
+	&= t
+\intertext{and check whether the initial values match with $\alpha$:}
+z(0) &= \frac{1 + 1 - 0}{2} - 1 = 0 = \alpha\\
+\frac{dz}{dt}(0) &= \frac{1}{2}(1-1-0) = 0 = \alpha\\
+\frac{d^2z}{dt^2} &= \frac{1}{2}(1-1) = 0 = \alpha
+\end{align*}
+Therefore, $z(t) = \frac{1}{2}(e^t + e^{-t} - t^2) - 1$ is the solution to the given IVP with $t_0 = 0, \alpha = 0$.
+
+\item
+Let $k_1 = z, k_2 = z', k_3 = z''$, then
+\begin{align*}
+k_1' &= k_2\\
+k_2' &= k_3\\
+k_3' &= \frac{d^3z}{dt^3}\\
+	&= \frac{dz}{dt} + t \text{ (by the IVP)}\\
+	&= k_2 + t
+\end{align*}
+Therefore, the system is:
+\begin{align*}
+	\begin{bmatrix}
+		k_1'\\
+		k_2'\\
+		k_3'
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		k_2\\
+		k_3\\
+		k_2 + t
+	\end{bmatrix}
+\end{align*}
+
+\item
+\end{enumerate}
