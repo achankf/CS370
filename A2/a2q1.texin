@@ -1,20 +1,29 @@
 \begin{enumerate}[(a)]
 \item
 Let $z_1=y, z_2 = \frac{dy}{dt}$, then the ODE becomes the following:
+\begin{equation}
+	\frac{dz_1}{dt} = z_2\\
+\end{equation}
+\begin{equation}
+	\frac{dz_2}{dt} = \frac{d}{dt}\frac{dz_1}{dt}=\frac{d^2y}{dt^2} = y = z_1\\
+\end{equation}
+Hence,
 \begin{gather*}
 	\frac{dz}{dt} = f(z,t)=
 	\begin{cases}
 		\frac{dz_1}{dt} = z_2\\
-		\frac{dz_2}{dt} = y = z_1
+		\frac{dz_2}{dt} = z_1
 	\end{cases}\\
-	(z_1(0), z_2(0)) = (1,2)
 \end{gather*}
 With initial conditions $(z_1(0), z_2(0)) = (1,2)$.
 
 \item
-The answers are the following:
+With Forward Euler Method,
 \begin{gather*}
-z(1) = z(0) + f(z(0),0)h\\
+y(0.5) = z_1(0) + f(z_1,t) \times h\\
+	= z_1(0) + z_2(0) \times h\\
+	= 1 + 2 \times 0.5\\
+	= 2\\
 	= \begin{bmatrix}1\\2\end{bmatrix} + f(\begin{bmatrix}1\\2\end{bmatrix},0)(0.5)\\
 	= 1 + 
 \end{gather*}
