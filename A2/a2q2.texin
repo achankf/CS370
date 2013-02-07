@@ -43,5 +43,9 @@ Therefore, the system is:
 	\end{bmatrix}
 \end{align*}
 
-\item
+\item The codes
+\lstinputlisting{m/myEuler.m}
+
+\item The codes
+\lstinputlisting{m/myImprEuler.m}
 \end{enumerate}

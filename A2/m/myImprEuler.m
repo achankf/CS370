@@ -1,4 +1,4 @@
-function [z] = myEuler(t_0, t_final, N, alpha)
+function [z] = myImprEuler(t_0, t_final, N, alpha)
 	h = (t_final - t_0) / N;
 	NN = N+1;
 
@@ -9,8 +9,10 @@ function [z] = myEuler(t_0, t_final, N, alpha)
 	prev = 1;
 	tt = alpha;
 	for t = 2:NN
-		z(t) = z(prev) + h * k_2;
-		k_2 = k_2 + h * k_3;
+		k_2_star = k_2 + h * k_3;
+		k_3_star = k_3 + h * (k_2 + prev * h);
+		z(t) = z(prev) + h / 2 * (k_2 + k_2_star);
+		k_2 = k_2 + h / 2 * (k_3 + k_3_star);;
 		k_3 = k_3 + h * (k_2 + prev * h);
 
 		tt = tt + h;
