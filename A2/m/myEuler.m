@@ -10,8 +10,9 @@ function [z] = myEuler(t_0, t_final, N, alpha)
 	tt = alpha;
 	for t = 2:NN
 		z(t) = z(prev) + h * k_2;
+		k_2_temp = k_2;
 		k_2 = k_2 + h * k_3;
-		k_3 = k_3 + h * (k_2 + prev * h);
+		k_3 = k_3 + h * (k_2_temp + prev * h);
 
 		tt = tt + h;
 		actual(t) = 1/2 * (e^tt +e^(-tt) - tt^2) -1;

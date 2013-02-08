@@ -9,11 +9,12 @@ function [z] = myImprEuler(t_0, t_final, N, alpha)
 	prev = 1;
 	tt = alpha;
 	for t = 2:NN
-		k_2_star = k_2 + h * k_3;
-		k_3_star = k_3 + h * (k_2 + prev * h);
-		z(t) = z(prev) + h / 2 * (k_2 + k_2_star);
-		k_2 = k_2 + h / 2 * (k_3 + k_3_star);;
-		k_3 = k_3 + h * (k_2 + prev * h);
+		kpx = k_2 + h * k_3;
+		kppx = k_3 + h * (k_2 + prev * h);
+		z(t) = z(prev) + h / 2 * (k_2 + kpx);
+		k_2_temp = k_2;
+		k_2 = k_2 + h / 2 * (k_3 + kppx);
+		k_3 = k_3 + h / 2 * (k_2_temp + prev * h  + kppx);
 
 		tt = tt + h;
 		actual(t) = 1/2 * (e^tt +e^(-tt) - tt^2) -1;

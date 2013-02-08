@@ -1,0 +1,15 @@
+Expand the following with the given Taylor series expansion:
+\begin{align*}
+	f \bigg ( t_n + \frac{h}{2}, y_n + \frac{1}{2}hf(t_n,y_n) \bigg )
+	&= f(t_n,y_n) + \frac{\partial (y')}{\partial t}\frac{h}{2} + \frac{\partial (y')}{\partial y}\frac{h}{2}(y') + O(h^2)\\
+	\intertext{ Notice that $f(t_n,y_n) = y'$. Factor out $\frac{h}{2}$ and then apply the given identity:}
+	\implies &= y' + \frac{h}{2} \bigg( \frac{d^2y(t)}{dt^2} \bigg) + O(h^2)\\
+	&= y' + \frac{h}{2} y'' + O(h^2)
+\end{align*}
+Now substitute the above into $y_{n+1}$:
+\begin{align*}
+	y_{n+1} &= y_n + h \bigg( y' + \frac{h}{2} y'' + O(h^2) \bigg)\\
+	&= y_n + \frac{h}{1!}y' + \frac{h^2}{2!} y'' + O(h^3)
+\end{align*}
+Thus, $y_{n+1}$ matches the first 3 terms in the Taylor series expansion, and has small terms that are $O(h^3)$. Therefore the truncation error is $O(h^3)$.
+\hfill $\blacksquare$
