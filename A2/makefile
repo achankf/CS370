@@ -5,7 +5,7 @@ LOADPATH:=$(shell echo `pwd`/m):.:$(shell echo $$LOADPATH)
 
 all: $(OUT)
 
-$(OUT):$(IN) $(INCLUDE)
+$(OUT):$(IN) $(INCLUDE) m/*.m
 	pdflatex $<
 	pdflatex $<
 
