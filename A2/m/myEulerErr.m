@@ -1,3 +1,4 @@
+clear
 t=4
 z = (e^t + e^(-t) - t^2) / 2 - 1
 prev = 1;
