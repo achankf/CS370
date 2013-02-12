@@ -1,7 +1,9 @@
 function [z] = myImprEuler(t_0, t_final, N, alpha)
 	h = (t_final - t_0) / N;
 	z = zeros(1,N+1);
-	z(1) = kp = kpp = alpha;
+	z(1) = alpha;
+	kp = alpha;
+	kpp = alpha;
 
 	actual = zeros(1,N+1);
 	prev = 1;
@@ -27,4 +29,3 @@ function [z] = myImprEuler(t_0, t_final, N, alpha)
 	end
 	%x = t_0:h:t_final;
 	%plot(x,z,x,actual);
-endfunction
