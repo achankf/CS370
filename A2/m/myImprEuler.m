@@ -1,31 +1,13 @@
 function [z] = myImprEuler(t_0, t_final, N, alpha)
 	h = (t_final - t_0) / N;
-	z = zeros(1,N+1);
-	z(1) = alpha;
-	kp = alpha;
-	kpp = alpha;
+	k(1:3,1) = alpha;
 
-	actual = zeros(1,N+1);
-	prev = 1;
-	for t = 2:N+1
-		% Modified Euler for z (the result)
-		kppp = kp + prev*h;
-		f1 = kp;
-		f1x = kp + h * kpp;
-		f2 = kpp;
-		f2x = kpp + h*kppp;
-		f3 = kp + prev*h;
-		f3x = f1x + t*h;
-
-		z(t) = z(prev) + h/2 *(f1+f1x);
-		kp = kp + h/2 *(f2+f2x);
-		kpp = kpp + h/2 *(f3+f3x);
-
-		%z(t) = kx(t);
-		%ss = t*h;
-		%actual(t) = (e^ss + e^(-ss) - ss^2) / 2 - 1;
-
-		prev = prev + 1;
+	for i = 1 : N+1
+		z(i) = k(1);
+		t = i*h;
+		
+		f = [k(2); k(3); k(2) + t];
+		fx1 = k(2) + h * f(2);
+		fx = [fx1; k(3) + h * f(3); fx1 + (i)*h];
+		k = k + h/2 .* (f + fx);
 	end
-	%x = t_0:h:t_final;
-	%plot(x,z,x,actual);
