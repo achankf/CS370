@@ -18,6 +18,7 @@ z(0) &= \frac{1 + 1 - 0}{2} - 1 = 0 = \alpha\\
 \frac{d^2z}{dt^2} &= \frac{1}{2}(1-1) = 0 = \alpha
 \end{align*}
 Therefore, $z(t) = \frac{1}{2}(e^t + e^{-t} - t^2) - 1$ is the solution to the given IVP with $t_0 = 0, \alpha = 0$.
+\hfill $\blacksquare$
 
 \item
 Let $k_1 = z, k_2 = z', k_3 = z''$, then
@@ -42,10 +43,24 @@ Therefore, the system is:
 		k_2 + t
 	\end{bmatrix}
 \end{align*}
+\hfill $\blacksquare$
 
 \item The codes
 \lstinputlisting{m/myEuler.m}
+\hfill $\blacksquare$
 
 \item The codes
 \lstinputlisting{m/myImprEuler.m}
 \end{enumerate}
+\hfill $\blacksquare$
+
+{\bf (answering e and f at once)} Consider the codes that are used to find the error ratio. euler\_error is a higher order function that takes a {\bf function}, the actual value, and the maximum number of iterations.
+\lstinputlisting{m/euler_error.m}
+Driver script to the above function
+\lstinputlisting{m/euler_error_ret.m}
+Result (formatted by \LaTeX):\\
+\input{euler_error.result}
+
+Since $p \approx \frac{1}{2}$ for Forward Euler, therefore Forward Euler is first order.\\
+Since $p \approx \frac{1}{4}$ for Improved Euler, therefore Improved Euler is second order.
+\hfill $\blacksquare$
