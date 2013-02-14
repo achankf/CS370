@@ -59,7 +59,7 @@ Therefore, the system is:
 Driver script to the above function
 \lstinputlisting{m/euler_error_ret.m}
 Result (formatted by \LaTeX):\\
-\input{euler_error.result}
+\input{euler_error.texin}
 
 Since $p \approx \frac{1}{2}$ for Forward Euler, therefore Forward Euler is first order.\\
 Since $p \approx \frac{1}{4}$ for Improved Euler, therefore Improved Euler is second order.
