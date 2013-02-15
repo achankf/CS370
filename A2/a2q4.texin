@@ -19,9 +19,10 @@ $v_0$ & $\theta_0$ & $\rho$ & distance\\
 10.529 & 22.5000 & 1.2900 & 8.8615\\
 \hline
 \end{tabular}\\
+
 Therefore, the sprinter with higher initial velocity results in higher distance than the sprinter with lower initial velocity. 
 Air resisitence has little effect on the distance because the distance when $v_0 = 10.529$ and $\rho = 1.2900$ (higher resistence) is greater than the the distance when $v_0 = 10$ and $\rho = 0.9400$ (lower resistence).
-Therefore initial velocity is the main contributor to distance.
+Therefore initial velocity is more important than air resistence.
 
 The final animation graph for a:
 \includegraphics[scale=0.6]{grapha.eps}
