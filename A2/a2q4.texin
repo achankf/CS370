@@ -1,10 +1,31 @@
+Consider the codes:
+
+sprinter\_de.m contains the definition of the DE.
+\lstinputlisting{m/sprinter.m}
+sprinter\_root.m is a wrapper function for $fzerotx$.
+\lstinputlisting{m/sprinter_root.m}
+The event function:
+\lstinputlisting{m/hit_ground.m}
+a2q4.m is the driver script.
+\lstinputlisting{m/a2q4.m}
+
 \begin{tabular}{|r|r|r|r|}
 \hline
 $v_0$ & $\theta_0$ & $\rho$ & distance\\
 \hline
 10.0000 & 22.5000 & 0.9400 & 8.0807\\
 10.0000 & 22.5000 & 1.2900 & 8.0487\\
-7.9761 & 22.5000 & 0.9400 & 8.9000\\
-7.9761 & 22.5000 & 1.2900 & 5.2680\\
+10.529 & 22.5000 & 0.9400 & 8.9000\\
+10.529 & 22.5000 & 1.2900 & 8.8615\\
 \hline
-\end{tabular}
+\end{tabular}\\
+Therefore, the sprinter with higher initial velocity results in higher distance than the sprinter with lower initial velocity. 
+Air resisitence has little effect on the distance because the distance when $v_0 = 10.529$ and $\rho = 1.2900$ (higher resistence) is greater than the the distance when $v_0 = 10$ and $\rho = 0.9400$ (lower resistence).
+Therefore initial velocity is the main contributor to distance.
+
+The final animation graph for a:
+\includegraphics[scale=0.6]{grapha.eps}
+
+The final animation graph for b:
+\includegraphics[scale=0.6]{graphb.eps}
+\hfill $\blacksquare$

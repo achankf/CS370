@@ -5,9 +5,12 @@ LOADPATH:=$(shell echo `pwd`/m):.:$(shell echo $$LOADPATH)
 
 all: $(OUT)
 
-$(OUT):$(IN) $(INCLUDE) m/*.m
+$(OUT):$(IN) $(INCLUDE) m/*.m grapha.eps graphb.eps
 	pdflatex $<
 	pdflatex $<
+
+grapha.eps graphb.eps : m/a2q4_eps.m4
+	m4 $< | octave
 
 .phony: clean
 clean:
