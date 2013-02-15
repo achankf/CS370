@@ -6,9 +6,12 @@ sprinter\_root.m is a wrapper function for $fzerotx$.
 \lstinputlisting{m/sprinter_root.m}
 The event function:
 \lstinputlisting{m/hit_ground.m}
+The animation function:
+\lstinputlisting{m/animation.m}
 a2q4.m is the driver script.
 \lstinputlisting{m/a2q4.m}
 
+The result is the following:\\
 \begin{tabular}{|r|r|r|r|}
 \hline
 $v_0$ & $\theta_0$ & $\rho$ & distance\\
@@ -24,9 +27,9 @@ Therefore, the sprinter with higher initial velocity results in higher distance 
 Air resisitence has little effect on the distance because the distance when $v_0 = 10.529$ and $\rho = 1.2900$ (higher resistence) is greater than the the distance when $v_0 = 10$ and $\rho = 0.9400$ (lower resistence).
 Therefore initial velocity is more important than air resistence.
 
-The final animation graph for a:
+The final animation graph for a:\\
 \includegraphics[scale=0.6]{grapha.eps}
 
-The final animation graph for b:
+The final animation graph for b:\\
 \includegraphics[scale=0.6]{graphb.eps}
 \hfill $\blacksquare$
