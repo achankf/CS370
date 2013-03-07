@@ -1,11 +1,9 @@
-Consider $W^{N+k}, 0 \le k \le N-1$:
+Consider $W^{N+k}, 0 \le k \le N-1$, where $W^N$ is the n-th root of unity:
 \begin{align*}
-W^{N+k} &= e^{2\pi i(N+k) / N}\\
-	&= e^{2\pi i} e^{2\pi ik /N}\\
-	&= e^{2\pi ik /N}\\
+W^{N+k} &= W^N W^k\\
 	&= W^k
 \end{align*}
-But according to the course note,
+But according to the course note, since $f_n$ is real
 \begin{align*}
 W^{N-k} &= W^{-k}\\
 \implies W^{N-k} &= W^{-(N+k)} \text{ (from above)}\\
@@ -18,4 +16,4 @@ Expand $F_k$:
 F_k &= \frac{1}{N} \sum_{n=0}^{N-1} f_n W^{-nk}\\
 	&= \frac{1}{N} \sum_{n=0}^{N-1} f_n (W^{k})^{-n}
 \end{align*}
-Since $\{W^k\} \in \mathbb{R}$, therefore $\{F_k\} \in \mathbb{R}$.
+Since $\{W^k\} \subset \mathbb{R}$, therefore $\{F_k\} \subset \mathbb{R}$.
