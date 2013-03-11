@@ -1,32 +1,36 @@
-Let $k_1 = f(t_n, y_n)$ and $k_2 = f(t_n + \frac{3}{4}h, y_n \frac{3}{4} h f(t_n,y_n))$.
+Let $k_1 = f(t_n, y_n)$ and $k_2 = f(t_n + \frac{3}{4}h, y_n +\frac{3}{4} h f(t_n,y_n))$.
 Then
 \begin{align*}
 k_1 &= -\lambda y(t_n)\\
 	&= -\lambda y_n\\
-k_2 &= f(t_n + \frac{3}{4}h, y_n + \frac{3}{4} h k_1)\\
-	%&= f(t_n + \frac{3}{4}h, y_n \frac{3}{4} h \lambda y_n)\\
-	&= -\lambda (y_n + \frac{3}{4} h (-\lambda y_n))\\
+k_2 &= -\lambda (y_n + \frac{3}{4} h (-\lambda y_n))\\
 	&= y_n( \frac{3}{4} h \lambda^2 - \lambda)
 \end{align*}
-Substituting $k_1 and k_2$ into $y_{n+1}$:
+Substituting $k_1$ and $k_2$ into $y_{n+1}$:
 \begin{align*}
 y_{n+1} &= y_n + \frac{h}{3} \bigg( k_1 + 2k_2 \bigg)\\
 	&= y_n + \frac{h}{3} \bigg( -\lambda y_n 
 		+ 2 \big(y_n ( \frac{3}{4} h \lambda^2 - \lambda) \big) \bigg)\\
 	&= y_n + \frac{y_n h}{3} \bigg( 
 		2 ( \frac{3}{4} h \lambda^2 - \lambda) - \lambda \bigg)\\
-	&= y_n (1 + \frac{h}{3} \bigg( 
-		\frac{3}{2} h \lambda^2 - 2\lambda - \lambda \bigg)\\
+	&= y_n \bigg(1 + \frac{h}{3} \big( 
+		\frac{3}{2} h \lambda^2 - 2\lambda - \lambda \big) \bigg)\\
 	&= y_n \bigg( 1 + 
 		\frac{1}{2} h^2 \lambda^2 - h\lambda \bigg)\\
 	\implies &= y_0 \bigg( 1 +
-		\frac{1}{2} h^2 \lambda^2 - h\lambda \bigg)^n\\
+		\frac{1}{2} h^2 \lambda^2 - h\lambda \bigg)^{n+1}
 \end{align*}
 In order for $y_{n+1}$ to be stable,
 \begin{align*}
-| 1 + \frac{1}{2} h^2 \lambda^2 - h\lambda | &\le 1\\
-\frac{1}{2} h^2 \lambda^2 - h\lambda &\le 0 \text{ (since $h, \lambda$ are positive)}\\
-\implies h \le 0 \text{ (impossible since $h>0$)} &\text{ or } h \le \frac{2}{\lambda}
+| 1 + \frac{1}{2} h^2 \lambda^2 - h\lambda | &< 1\\
+\frac{1}{2} h^2 \lambda^2 - h\lambda &< 0 \text{ (consider the $<1$ case)}\\
+\implies h < 0 \text{ (impossible since $h>0$)} &\text{ or } h < \frac{2}{\lambda}
 \end{align*}
-Therefore, the computation is conditionally stable when $h \le \frac{2}{\lambda}$.
+For the $> -1$ case,
+\begin{align*}
+1+ \frac{1}{2} h^2 \lambda^2 - h\lambda &> -1\\
+2+ \frac{1}{2} h^2 \lambda^2 - h\lambda &> 0
+\end{align*}
+The discriminant $1 - 4(\frac{1}{2})(1) = -1 < 0$, hence the polynomial has no real root. Thus, ignore this case.
+Therefore, the computation is conditionally stable when $0 < h < \frac{2}{\lambda}$.
 \hfill $\blacksquare$
