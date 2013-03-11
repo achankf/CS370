@@ -5,7 +5,6 @@ F_k &= \frac{1}{N} \sum_{n=1}^{N} f_{N-n} \overline{W}^{(N-k)n}\\
 	&= \frac{1}{N} \sum_{n=0}^{N-1} f_{n} \overline{W}^{(N-k)n} \text{ (by symmetry)}\\
 	&= \frac{1}{N} \sum_{n=0}^{N-1} f_{n} \overline{W}^{Nk} \overline{W}^{-nk}\\
 	&= \frac{1}{N} \sum_{n=0}^{N-1} f_{n} \overline{W}^{-nk} \text{ (since $\overline{W}^{Nk}=1$)}\\
-	&= \frac{1}{N} \sum_{n=0}^{N-1} f_{n} \overline{W}^{-nk}\\
 	&= F_{-k}
 \end{align*}
 Notice the above works due to the associative property of addition for complex number.
@@ -20,7 +19,6 @@ F_k &= \frac{2F_k}{2}\\
 Since $W^{kn} \in \mathbb{C}$, let $W^{kn} = a_n + ib_n$, where $a_n,b_n \in \mathbb{R}; i^2 = -1$. Then,
 \begin{align*}
 F_k &= \frac{1}{2N} \bigg( \sum_{n=0}^{N-1} f_n(a_n-ib_n + a_n+ib_n) \bigg)\\
-	&= \frac{1}{2N} \bigg( \sum_{n=0}^{N-1} f_n(a_n-ib_n + a_n+ib_n) \bigg)\\
 	&= \frac{1}{2N} \bigg( \sum_{n=0}^{N-1} f_n(2a_n) \bigg) \in \mathbb{R} \text{ (since $N, f_n, a_n \in \mathbb{R}$)}
 \end{align*}
 As required.
