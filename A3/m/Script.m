@@ -10,7 +10,7 @@ for i = 1:4
 	tol = vector_tol(i);
 
 	% computation
-	[Y drop] = compress(I, tol);
+	[Y drop] = Compress(I, tol);
 	drops(i) = drop;
 	rel_error(i) = sqrt(mean2((Y-I).^2) / (mean2(I.^2)));
 
