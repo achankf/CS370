@@ -1,0 +1,4 @@
+The compressed images do not seem to lose much details, despite that up to 70% of the Fourier coefficients were dropped.
+Numerically speaking, the error values show that the errors are about (or less than) 8%.
+
+In conclusion, image compression can eliminate many unecessary details with relatively little lost of quality.
