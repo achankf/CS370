@@ -11,5 +11,4 @@ function [Y drop] = compress(f, tol)
 			Y(i:i+7, j:j+7) = uint8(real(ifft2(temp)));
 		end
 	end
-
-	drop =0;
+	drop = num_drop / num_nz_coe;
