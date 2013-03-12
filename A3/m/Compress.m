@@ -1,4 +1,4 @@
-function [Y drop] = compress(f, tol)
+function [Y drop] = Compress(f, tol)
 	[W H] = size(f);
 	num_drop = 0; % counts # of drops
 	num_nz_coe = 0; %counts # of non-zeros in original
