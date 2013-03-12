@@ -1,6 +1,3 @@
 I = imread('dogBW.jpg');
-%[Y drop] = compress(I, 0.2);
-%rel_error = sqrt(mean2((B-Y).^2) / (mean2(Y.^2)));
-
-vector_tol = [1 0.2256 0.1512 0.06409];
+vector_tol = [0 0.001752 0.00279 0.00665];
 runall(I,vector_tol);
