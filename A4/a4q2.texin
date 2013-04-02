@@ -1,0 +1,17 @@
+From (2.16), find $\frac{S_1^{''}(x_1)}{2}$ ($\frac{1}{2}$ will be a common factor later):
+\begin{align*}
+S_1^{''}(x) &= 2 \bigg( \frac{3y_1^{'} - 2s_1 - s_2}{\Delta x_1} \bigg)
+	+ 6 \bigg( \frac{s_1 + s_2 - 2y'_1}{(\Delta x_1)^2} \bigg) (x-x_1)\\
+\implies \frac{S_1^{''}(x_1)}{2} &= \frac{3y_1^{'} - 2s_1 - s_2}{\Delta x_1}
+\end{align*}
+Then find $\frac{S_{n-1}^{''}(x_n)}{2}$:
+\begin{align*}
+S_{n-1}^{''}(x) &= 2 \bigg( \frac{3y_{n-1}^{'} - 2s_{n-1} - s_n}{\Delta x_{n-1}} \bigg)
+	+ 6 \bigg( \frac{s_{n-1} + s_n - 2y'_{n-1}}{(\Delta x_{n-1})^2} \bigg) (x-x_{n-1})\\
+\implies \frac{S_{n-1}(x_n)^{''}}{2} &= \frac{s_n + 2s_{n-1} - 3y_{n-1}^{'}}{\Delta x_{n-1}}
+\end{align*}
+Now set $S_1^{''}(x_1) = S_{n-1}^{''}(x_n)$:
+\begin{align*}
+\frac{3y_1^{'} - 2s_1 - s_2}{\Delta x_1} &= \frac{s_n + 2s_{n-1} - 3y_{n-1}^{'}}{\Delta x_{n-1}}\\
+\implies \Delta x_1 s_n + 2 \Delta x_1 s_{n-1} + 2 \Delta x_{n-1} s_1 + \Delta x_{n-1} s_2 &= 3\Delta x_{n-1} y'_1 + 3 \Delta x_1 y'_{n-1}
+\end{align*}
