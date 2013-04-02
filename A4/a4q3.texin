@@ -1,0 +1,20 @@
+First rearrange the given equation to the following:
+\begin{equation}\label{eq:given_rearrange}
+Ax = (B+I) (A^{-1}b + Cb)
+\end{equation}
+Then consider the following:
+\begin{align*}
+y &= A^{-1}b\\
+\implies Ay &= b
+\end{align*}
+This means that I can reuse the LU factorization to solve for $y$.
+Then substitute $y$ into equation \ref{eq:given_rearrange}:
+\begin{equation}\label{eq:given_rearrange_y}
+Ax = (B+I) (y + Cb)
+\end{equation}
+So, everything on the right-hand side is known.
+Notice that $(B+I)$ is a $n \times n$ square matrix, and $(y +Cb)$ is a $n \times 1$ matrix.
+Hence, the right-hand side becomes a $n \times 1$ matrix.
+Thus, equation \ref{eq:given_rearrange_y} is of the form $Ax = b$, so I can use LU factorization and forward and backward substitution.
+
+{\bf Algorithm}
