@@ -1,17 +1,12 @@
-function [a b c d] = MySpline(x0,y0)
-	A = sortrows([x0' y0]);
-	x = A(:,1);
-	y = A(:,2);
-	
+function [a b c d] = MySpline(x,y)
+%	A = sortrows([x0' y0]);
+%	x = A(:,1);
+%	y = A(:,2);
 
 	n = length(x);
-	deltax = zeros(n:1);
-	a = zeros(n-1,1);
-	b = zeros(n-1,1);
-	c = zeros(n-1,1);
-	d = zeros(n-1,1);
-	y1 = zeros(n-1,1);
 
+	deltax = zeros(n:1);
+	y1 = zeros(n-1,1);
 	T = zeros(n,n);
 	r = zeros(n,1);
 
@@ -51,8 +46,11 @@ function [a b c d] = MySpline(x0,y0)
 
 	s = bslashtx(T,r);
 
-	a = y([1:n-1],:)
+	a = y([1:n-1],:);
 	b = s([1:n-1],:);
+
+	c = zeros(n-1,1);
+	d = zeros(n-1,1);
 
 	for i = 1:n-1
 		c(i) = (3 * y1(i) - 2 * s(i) - s(i+1)) / deltax(i);
