@@ -1,3 +1,11 @@
+From the condition
+\begin{align*}
+S'_1 (x_1) &= S'_{n-1}(x_n)\\
+\implies s_1 &= s_n\\
+\implies s_1 - s_n &= 0
+\end{align*}
+This is the first equation.
+
 From (2.16), find $\frac{S_1^{''}(x_1)}{2}$ ($\frac{1}{2}$ will be a common factor later):
 \begin{align*}
 S_1^{''}(x) &= 2 \bigg( \frac{3y_1^{'} - 2s_1 - s_2}{\Delta x_1} \bigg)
