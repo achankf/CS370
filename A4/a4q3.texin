@@ -23,32 +23,31 @@ Thus, equation \ref{eq:given_rearrange_y} is of the form $Ax = b_{new}$, so the 
 Do LU factorization on $A$, which costs $\frac{2n^3}{3} + O(n^2)$ flops (from course notes).
 
 \item
-Solve for $Cb$, which is equivalent to solving
-\begin{align*}
-\sum^n_{i=1} \sum^n_{j=1} a_{ij}b_{j1}
-\end{align*}
-which cost $O(n^2)$ flops. This will result in a $n$ by $1$ matrix.
+Solve for $Cb$.
+The cost is equivalent to counting $n$ times the dot product between the first row of $A$ and the first column of $b$.
+Hence, the cost is $O(n^2)$ flops. This will result in a $n$ by $1$ matrix.
 
 \item
 Solve for $y$ by reusing the LU factorization of A. Hence, the cost $O(n^2)$ for back/forward substitution (from course notes).
 
 \item
-Solve for $(y+Cb)$.
+Solve for $(y+Cb)$ and store the result into $k$.
 Since $Cb$ is already found, this is equivalent to adding each element position-wise.
 There are $n$ elements in the result. Hence, the cost is $O(n)$.
 
 \item
-Solve for $(B+I)$.
+Solve for $(B+I)$ and store the result into $K$.
 Simular to above, but there are $n^2$ elements.
 Hence, the cost is $O(n^2)$ flops.
 This will result in a $n$ by $n$ matrix.
 
 \item
-Solve for $(B+I) (y + Cb)$.
+Solve for $(B+I) (y + Cb) \equiv Kk$, which is a $n \times 1$ matrix.
 The two factors are already being discovered, so this is equivalent to solving another $Cb$. Hence, the cost is $O(n^2)$.
 
 \item
 Finally, reuse the LU factorization for $A$, and then use back/forward substitutions to solve for $x$.
 Hence, the cost is $O(n^2)$.
 \end{enumerate}
-Summing the cost together, the total cost is $\frac{2n^3}{3} + O(n^2)$ flops.
+Notice that all steps occur sequentially, so the total cost is the sum of the above costs.
+Hence, the total cost is $\frac{2n^3}{3} + O(n^2)$ flops.
