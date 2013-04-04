@@ -4,4 +4,4 @@ function x = MyPageRank(G,a)
 	R = length(G);
 	I = eye(R);
 	e = ones(R,1);
-	x = (I-a * P) \ ((1-a)/R * e);
+	x = bslashtx((I-a * P), ((1-a)/R * e));
