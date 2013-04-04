@@ -4,7 +4,11 @@ y = [0.941636 0.719170 0.716972 0.486447 0.487668 0.260562 0.272283 0.059096 0.0
 R = length(x);
 
 % create t
-t(2:R-1) = t(1:R-2) + sqrt(diff(x(1:R-1)).^2 + diff(y(1:R-1)).^2);
+t = zeros(R,1);
+differ = t(1:R-1) + sqrt(diff(x).^2 + diff(y).^2)
+for i = 2:R
+	t(i) = t(i-1) + differ(i-1);
+end
 
 % create splines
 [xa xb xc xd] = MySpline(t,x);
