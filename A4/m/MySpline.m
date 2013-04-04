@@ -10,7 +10,7 @@ function [a b c d] = MySpline(x,y)
 	r = zeros(n-1,1);
 
 	% generate the matrix T
-	T(1,[1,2,n-1]) = [2 * (dx(n-1) + dx(1)); -dx(n-1); dx(1)];
+	T(1,[1,2,n-1]) = [2 * (dx(n-1) + dx(1)); dx(n-1); dx(1)];
 	for i = 2:n-2
 		T(i,i-1:i+1) = [dx(i); 2 * (dx(i-1) + dx(i)); dx(i-1)];
 	end

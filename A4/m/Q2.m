@@ -5,7 +5,7 @@ R = length(x);
 
 % create t
 t = zeros(R,1);
-differ = t(1:R-1) + sqrt(diff(x).^2 + diff(y).^2)
+differ = t(1:R-1) + sqrt(diff(x).^2 + diff(y).^2);
 for i = 2:R
 	t(i) = t(i-1) + differ(i-1);
 end
