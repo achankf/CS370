@@ -1,5 +1,4 @@
 G = zeros(18,18);
-D = diag(1./[2 1 3 2 1 1 2 2 2 2 3 1 1 3 1 2 4 2]);
 
 G(2,1) = 1;
 G(11,1) = 1;
@@ -54,8 +53,21 @@ G(18,17) = 1;
 G(14,18) = 1;
 G(17,18) = 1;
 
-x = MyPageRank(G, 0.85);
-sortrows([ x [1:18]' ])
+fig = figure(1);
 
-x = MyPageRank(G, 0.5);
-sortrows([ x [1:18]' ])
+pr1 = MyPageRank(G, 0.85);
+subplot(1,2,1);
+bar(1:18,pr);
+title('Page Rank alpha=0.85');
+xlabel('Page Number');
+ylabel('Probability');
+
+pr2 = MyPageRank(G, 0.5);
+subplot(1,2,2);
+bar(1:18,pr2);
+title('Page Rank alpha=0.5');
+xlabel('Page Number');
+ylabel('Probability');
+
+% sorted ranking output
+printmat([ sortrows([ pr1 [1:18]' ]) sortrows([ pr2 [1:18]' ])],'','','Probability(alpha=0.85) Page# Probability(alpha=0.5) Page#');
