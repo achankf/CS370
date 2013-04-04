@@ -53,21 +53,34 @@ G(18,17) = 1;
 G(14,18) = 1;
 G(17,18) = 1;
 
-fig = figure(1);
+fig1 = figure(1);
+spy(G);
+saveas(fig1,'spy.png','png');
+
+fig2 = figure(2);
 pr1 = MyPageRank(G, 0.85);
 bar(1:18,pr1);
 title('Page Rank alpha=0.85');
 xlabel('Page Number');
 ylabel('Probability');
-saveas(fig,'pageranks_b.png','png');
+saveas(fig2,'pageranks_b.png','png');
 
-fig2 = figure(2);
+fig3 = figure(3);
 pr2 = MyPageRank(G, 0.5);
 bar(1:18,pr2);
 title('Page Rank alpha=0.5');
 xlabel('Page Number');
 ylabel('Probability');
-saveas(fig2,'pageranks_c.png','png');
+saveas(fig3,'pageranks_c.png','png');
 
 % sorted ranking output
-printmat([ sortrows([ pr1 [1:18]' ]) sortrows([ pr2 [1:18]' ])],'','','Probability(alpha=0.85) Page# Probability(alpha=0.5) Page#');
+
+[S, I] = sort(pr1,'descend');
+[S, I] = sortrows( [ I S] );
+
+[S2, I2] = sort(pr2,'descend');
+[S2, I2] = sortrows( [ I2 S2] );
+
+change = I-I2;
+
+ret = [ [1:18]' S(:,2) I S2(:,2) I2 change]
