@@ -54,20 +54,20 @@ G(14,18) = 1;
 G(17,18) = 1;
 
 fig = figure(1);
-
 pr1 = MyPageRank(G, 0.85);
-subplot(1,2,1);
-bar(1:18,pr);
+bar(1:18,pr1);
 title('Page Rank alpha=0.85');
 xlabel('Page Number');
 ylabel('Probability');
+saveas(fig,'pageranks_b.png','png');
 
+fig2 = figure(2);
 pr2 = MyPageRank(G, 0.5);
-subplot(1,2,2);
 bar(1:18,pr2);
 title('Page Rank alpha=0.5');
 xlabel('Page Number');
 ylabel('Probability');
+saveas(fig2,'pageranks_c.png','png');
 
 % sorted ranking output
 printmat([ sortrows([ pr1 [1:18]' ]) sortrows([ pr2 [1:18]' ])],'','','Probability(alpha=0.85) Page# Probability(alpha=0.5) Page#');
