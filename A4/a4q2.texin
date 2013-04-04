@@ -1,10 +1,9 @@
 From the condition
 \begin{align*}
 S'_1 (x_1) &= S'_{n-1}(x_n)\\
-\implies s_1 &= s_n\\
-\implies s_1 - s_n &= 0
+\implies s_1 &= s_n
 \end{align*}
-This is the first equation.
+This will be used to replace all $s_n$ with $s_1$ later.
 
 From (2.16), find $\frac{S_1^{''}(x_1)}{2}$ ($\frac{1}{2}$ will be a common factor later):
 \begin{align*}
