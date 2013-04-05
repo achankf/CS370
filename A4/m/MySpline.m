@@ -21,7 +21,13 @@ function [a b c d] = MySpline(x,y)
 	r(2:n-1) = 3 * (dx(2:n-1) .* y1(1:n-2) + dx(1:n-2) .* y1(2:n-1));
 
 	% solve for Ts = r
-	s = bslashtx(T,r);
+	[L U p] = lutx(T);
+	P = zeros(n-1);
+	for i=1:n-1
+		P(i,p(i)) = 1;
+	end
+	yy = bslashtx(L, P*r);
+	s = bslashtx(U, yy);
 	s(n) = s(1); % boundary condition
 
 	% generate coeficients
