@@ -1,7 +1,7 @@
 function x = MyPageRank(G,a)
-	D = diag(1./[2 1 3 2 1 1 2 2 2 2 3 1 1 3 1 2 4 2]);
-	P = G*D;
 	R = length(G);
+	D = diag(1./sum(G(:,1:R)));
+	P = G*D;
 	I = eye(R);
 	e = ones(R,1);
 	x = bslashtx((I-a * P), ((1-a)/R * e));
